@@ -1,5 +1,4 @@
-
-#define KILO_VERSION "0.0.1"
+#define SDP "0.0.1"
 
 #ifdef __linux__
 #define _POSIX_C_SOURCE 200809L
@@ -861,7 +860,7 @@ void editorRefreshScreen(void) {
             if (E.numrows == 0 && y == E.screenrows/3) {
                 char welcome[80];
                 int welcomelen = snprintf(welcome,sizeof(welcome),
-                    "Kilo editor -- verison %s\x1b[0K\r\n", KILO_VERSION);
+                    "Kilo editor -- verison %s\x1b[0K\r\n", SDP);
                 int padding = (E.screencols-welcomelen)/2;
                 if (padding) {
                     abAppend(&ab,"~",1);
@@ -1273,3 +1272,4 @@ int main(int argc, char **argv) {
     }
     return 0;
 }
+
